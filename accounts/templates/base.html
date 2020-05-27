@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static "images/icons/favicon.ico"%}"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/bootstrap/css/bootstrap.min.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.7.0/css/font-awesome.min.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "fonts/iconic/css/material-design-iconic-font.min.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/animate/animate.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/css-hamburgers/hamburgers.min.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/animsition/css/animsition.min.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/select2/select2.min.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static "vendor/daterangepicker/daterangepicker.css"%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href={% static "css/util.css"%}>
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css"%}">
+    <!--===============================================================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+<!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-softy-pinko.css' %}">
+</head>
+<body>
+<div id="header">
+    <a href="#" class="logo">
+        <p align="center" style="color:black; margin-top:-2px; font-size:159% "><b>PHOTOK</b></p>
+    </a>
+</div>
+<div id="content">
+    {% block content %} {% endblock %}
+</div>
+<!-- jQuery -->
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/scrollreveal.min.js'%}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js'%}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js'%}"></script>
+
+    <!-- Global Init -->
+    <script src="{% static 'assets/js/custom.js'%}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script>
+    var csrftoken = Cookies.get('csrftoken');
+    function csrfSafeMethod(method) {
+      // these HTTP methods do not require CSRF protection
+      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+          xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      }
+    });
+    $(document).ready(function(){
+      {% block domready %}
+      {% endblock %}
+       });
+  </script>
+</body>
+</html>

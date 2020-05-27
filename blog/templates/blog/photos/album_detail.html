@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ album.name }}{% endblock %}
+{% block content %}
+    <h1>{{ album.name }}</h1>
+    <p>{{ album.description }}</p>
+
+    {% for photo in album.photos.all %}
+    <h2>{{ photo.name }}</h2>
+        <img src="{{ photo.photo.url }}" class="image-detail">
+    {% endfor %}
+
+{% endblock %}
