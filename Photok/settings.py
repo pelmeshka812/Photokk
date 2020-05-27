@@ -25,7 +25,7 @@ SECRET_KEY = '7z7a!l#my!)kndfi2mf3(zkeg+25@^$g^9ap5wu#9k3jjn)tqm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://photokk.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
@@ -126,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'EUROPE/Moscow'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
