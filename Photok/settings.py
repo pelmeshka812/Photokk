@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7z7a!l#my!)kndfi2mf3(zkeg+25@^$g^9ap5wu#9k3jjn)tqm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['photokk.herokuapp.com', '127.0.0.1']
 
