@@ -19,8 +19,8 @@ from django.views.generic import CreateView, TemplateView, ListView, DetailView
 
 from accounts.models import Profile
 from blog.decorators import ajax_required
-from blog.forms import PhotoCreateForm, PhotoForm, AlbumForm
-from blog.models import Photo, Like, Dislike, Album
+from blog.forms import  PhotoForm, AlbumForm
+from blog.models import Photo, Like,  Album
 
 
 class AddPhoto(CreateView, LoginRequiredMixin):
@@ -40,7 +40,6 @@ class AddPhoto(CreateView, LoginRequiredMixin):
 
 class PhotoCreateView(LoginRequiredMixin, CreateView):
     form_class = PhotoForm
-    # model = Photo
     template_name = 'blog/photos/photo/create.html'
 
     def get_success_url(self):
@@ -183,25 +182,6 @@ class FollowView(LoginRequiredMixin, View):
         return HttpResponse(json.dumps(data), content_type='application/json')
 
 
-def error_404(request, exception):
-    """
-    Handling 404 errors
-    :param request:
-    :param exception:
-    :return:
-    """
-    data = {}
-    return render(request, 'core/error_404.html', data)
-
-
-def error_500(request):
-    """
-    Handling 500 errors
-    :param request:
-    :return:
-    """
-    data = {}
-    return render(request, 'core/error_500.html', data)
 
 
 class AlbumCreateView(CreateView, LoginRequiredMixin):
