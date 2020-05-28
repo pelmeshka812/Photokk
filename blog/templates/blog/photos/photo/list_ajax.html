@@ -3,7 +3,10 @@
   <div class="image">
     <a href="{{ photo.get_absolute_url }}">
         <a href="{{ photo.get_absolute_url }}">
-          <img src="{{ photo.url }}" width="100px">
+            {% if photo.photo %}
+                <img src="{{ photo.photo.url }}" width="100px">
+            {% endif %}
+
 
         </a>
     </a>
