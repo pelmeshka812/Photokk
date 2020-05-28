@@ -24,39 +24,7 @@
                 <!-- First column -->
                 <div class="col-lg-4 mb-4">
 
-                    <!-- Card -->
-                    <div class="card card-cascade narrower">
 
-                        <!-- Card image -->
-                        <div class="view view-cascade gradient-card-header mdb-color lighten-3">
-                            <h5 class="mb-0 font-weight-bold">Изменить фото</h5>
-                        </div>
-                        <!-- Card image -->
-
-                        <!-- Card content -->
-                        <div class="card-body card-body-cascade text-center">
-                            <div class="view overlay">
-                                <a href="
-                                        {% if request.user.profile.photo %}{{ request.user.profile.photo.url }}
-                                        {% else %}{% static "img/no_avatar.png" %}{% endif %}">
-                                    <img src="
-                                            {% if request.user.profile.photo %}{{ request.user.profile.photo.url }}
-                                            {% else %}{% static "img/no_avatar.png" %}{% endif %}"
-                                         alt="User Photo"
-                                         class="z-depth-1 mb-3 mx-auto border border-dark rounded"
-                                         width="100px">
-                                    <div class="mask flex-center waves-effect waves-light rgba-black-slight">
-                                        <p class="black-text">Увеличить</p>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                        </div>
-                        <!-- Card content -->
-
-                    </div>
-                    <!-- Card -->
 
                 </div>
                 <!-- First column -->
@@ -69,7 +37,7 @@
 
                         <!-- Card image -->
                         <div class="view view-cascade gradient-card-header mdb-color lighten-3">
-                            <h5 class="mb-0 font-weight-bold">Редактировать профиль</h5>
+                            <h5 class="mb-0 font-weight-bold">Профиль</h5>
                         </div>
                         <!-- Card image -->
                         <!-- Card content -->
@@ -129,15 +97,6 @@
                                     </div>
                                 </div>
                                 <!-- Third row -->
-                                <!-- Fourth row -->
-                                <div class="row">
-                                    <div class="col-md-12 text-center my-4">
-                      <span class="waves-input-wrapper waves-effect waves-light">
-                          <input type="submit" value="Обновить" class="btn btn-info btn-rounded">
-                      </span>
-                                    </div>
-                                </div>
-                                <!-- Fourth row -->
                             </form>
                             <!-- Edit Form -->
                         </div>
@@ -151,7 +110,7 @@
         </section>
         <!-- Section: Edit Account -->
     </div>
-
+<h1>Альбомы</h1>
     {% for album in request.user.user_albums.all %}
         <h3><a href="{{ album.get_absolute_url }}">{{ album.name }}</a></h3>
     {% endfor %}

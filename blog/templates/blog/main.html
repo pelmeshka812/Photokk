@@ -31,8 +31,8 @@
                         <ul class="nav">
                             <li><a href="#welcome" class="active">Основная страница</a></li>
                             <li><a href="#features">Про нас</a></li>
-                            <li><a href="#interests">Интересы</a></li>
-                            <li><a href="#blog">Прочее</a></li>
+                            <li><a href="#interests"></a></li>
+                            <li><a href="{% url 'accounts:login' %}">Логин</a></li>
                             <li><a href="#contact-us">Контакты</a></li>
                         </ul>
                         <a class='menu-trigger'>
@@ -54,10 +54,8 @@
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1>На этом сайте вы сможете найти <strong>настоящих </strong><br>друзей <strong>по
-                            интересам</strong></h1>
-                        <p>На планете огромное количество людей, очень просто найти людей со схожими интересами и мы вам
-                            в этом поможем</p>
+                        <h1>На этом сайте вы сможете найти <strong>прекрасные  </strong><br>фото, <strong>отражающие красоту этого мира</strong></h1>
+                        <p>Photok - пространство твоих сохраненных картинок </p>
                         <a href="#features" class="main-button-slider">Узнать больше</a>
                     </div>
                 </div>
@@ -91,7 +89,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
                     <div class="left-heading">
                         <p align="center" style="color:black; margin-top:300px; font-size:159% ">Давайте разберемся как
-                            найти людей с такими же интересами как у вас </p>
+                            устроен Photok </p>
                     </div>
                     <div class="left-text">
                         <p>
@@ -111,69 +109,7 @@
 
     <!-- ***** Features Big Item End ***** -->
 
-    <!-- ***** Home Parallax Start ***** -->
-    <section class="mini" id="interests">
-        <div class="mini-content">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-6">
-                        <div class="info">
-                            <h1>Интересы</h1>
-                            <p>Здесь вы сможете найти людей по различным интересам. Просто выберите категорию... </p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- ***** Mini Box Start ***** -->
-                <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="{% static 'assets/images/work-process-item-01.png' %}" alt=""></i>
-                            <strong>Спорт</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="{% static 'assets/images/work-process-item-01.png' %}" alt=""></i>
-                            <strong>Музыка</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="{% static 'assets/images/work-process-item-01.png' %}" alt=""></i>
-                            <strong>Кино и сериалы</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="{% static 'assets/images/work-process-item-01.png' %}" alt=""></i>
-                            <strong>Танцы</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="{% static 'assets/images/work-process-item-01.png' %}" alt=""></i>
-                            <strong>Книги</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="{% static 'assets/images/work-process-item-01.png' %}" alt=""></i>
-                            <strong>Еда</strong>
-                            <span>Godard pabst prism fam cliche.</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- ***** Mini Box End ***** -->
-            </div>
-        </div>
-    </section>
-    <!-- ***** Home Parallax End ***** -->
 
 
     <!-- ***** Contact Us Start ***** -->
@@ -258,7 +194,6 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="copyright">Copyright &copy; 2020 Softy Pinko Company - Design: TemplateMo</p>
                 </div>
             </div>
         </div>
