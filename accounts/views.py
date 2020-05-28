@@ -1,7 +1,6 @@
 from django.conf.global_settings import EMAIL_HOST_USER
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.models import User
 from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, \
     PasswordResetCompleteView, LoginView
@@ -14,7 +13,7 @@ from django.views.decorators.http import require_POST
 from django.views.generic import DetailView, ListView
 
 from accounts import forms
-from accounts.forms import LoginForm, UserRegistrationForm, ProfileForm
+from accounts.forms import LoginForm, UserRegistrationForm, ProfileForm, PasswordResetForm
 from accounts.models import Profile, Subscribe
 from django.contrib import messages
 
