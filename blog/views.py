@@ -181,7 +181,7 @@ class FollowView(LoginRequiredMixin, View):
         data = {'status': status}
         return HttpResponse(json.dumps(data), content_type='application/json')
 
-
+1
 
 
 class AlbumCreateView(CreateView, LoginRequiredMixin):

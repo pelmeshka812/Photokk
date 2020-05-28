@@ -15,7 +15,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('blog/', include('blog.urls')),
-    path('main/', TemplateView.as_view(template_name="blog/main.html")),
+    path('', TemplateView.as_view(template_name="blog/main.html")),
     path('api/v1/', include(router.urls)),
 ]
 
@@ -26,5 +26,3 @@ urlpatterns += static(settings.MEDIA_URL,
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-#handler404 = blog.views.error_404
-#handler500 = blog.views.error_500
